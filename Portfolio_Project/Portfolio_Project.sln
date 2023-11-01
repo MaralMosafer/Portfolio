@@ -5,6 +5,14 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0_Framework", "0_Framework\0_Framework.csproj", "{95847B45-71DF-455E-88BD-BDC475790978}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectManagement", "ProjectManagement", "{0FDCBC56-AFDE-41C8-9C75-E94DE58B6A28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PM.Domain", "PM.Domain", "{7ADD6CB9-AF76-4265-809A-795A0FAEAFE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PM.Application", "PM.Application", "{A02549DA-9477-44AF-93EA-46E31C84A7F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PM.Infrastructure", "PM.Infrastructure", "{330A9DDE-FD93-4D96-B12C-D88001DD27CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +26,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7ADD6CB9-AF76-4265-809A-795A0FAEAFE3} = {0FDCBC56-AFDE-41C8-9C75-E94DE58B6A28}
+		{A02549DA-9477-44AF-93EA-46E31C84A7F3} = {0FDCBC56-AFDE-41C8-9C75-E94DE58B6A28}
+		{330A9DDE-FD93-4D96-B12C-D88001DD27CE} = {0FDCBC56-AFDE-41C8-9C75-E94DE58B6A28}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8C3E667-3511-4029-8BDD-0846C05BC2F4}
