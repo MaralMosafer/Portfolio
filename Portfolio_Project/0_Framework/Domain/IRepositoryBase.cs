@@ -8,7 +8,7 @@ namespace _0_Framework.Domain
         List<Model> GetList();
         void CreateAndSave(Model entity);
         void SaveChanges();
-        void CheckDataExists();
-        Expression<Func<Model, bool>> expression();
+        bool CheckDataExists();
+        bool Exists(Expression<Func<Model, bool>> predicate);
     }
 }
