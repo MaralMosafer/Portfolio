@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PortfolioManagement.Application\PortfolioManagement.Application.csproj" />
     <ProjectReference Include="..\ProjectManagement.Infrastructure\PortfolioManagement.Infrastructure.csproj" />
   </ItemGroup>
 
