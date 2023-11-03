@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioManagement.Applica
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioManagement.Infrastructure", "ProjectManagement.Infrastructure\PortfolioManagement.Infrastructure.csproj", "{748F362A-87B5-41B6-8278-EE642B73375B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{14ACD18C-3A99-4AF4-8D7D-D324D5DAA155}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{14ACD18C-3A99-4AF4-8D7D-D324D5DAA155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioManagement.Configuration", "ProjectManagement.Configuration\PortfolioManagement.Configuration.csproj", "{FB8AB536-A2EE-4798-BD3D-8E087A208CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioManagement.Configuration", "ProjectManagement.Configuration\PortfolioManagement.Configuration.csproj", "{FB8AB536-A2EE-4798-BD3D-8E087A208CFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
