@@ -1,0 +1,92 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.InformationModel
+@{
+    ViewData["Title"] = "Information";
+}
+<div class="container-fluid pt-4 px-4">
+    <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
+        <h6 class="mb-5 mt-5">General Information</h6>
+        @if (Model.Message != null)
+        {
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <i class="fa fa-close me-2"></i>@Model.Message
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        @if (Model.Information == null)
+        {
+            <form role="form" method="post" enctype="multipart/form-data" class="m-5">
+                <div class="form-floating mb-3">
+                    <input type="text" name="Name" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" name="Family" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Family</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" name="Address" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Address</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="email" name="Email" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Email</label>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formFile" name="Picture" class="form-label">Picture</label>
+                    <input type="file" name="Picture" class="form-control form-control-sm bg-dark" id="formFileSm" accept="image/*">
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" name="PictureAlt" class="form-control" id="floatingInput">
+                    <label for="floatingInput">PictureAlt</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" name="PictureTitle" class="form-control" id="floatingInput">
+                    <label for="floatingInput">PictureTitle</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" name="Biography" id="floatingTextarea" style="height: 150px;"></textarea>
+                    <label for="floatingInput">Biography</label>
+                </div>
+
+                <button type="submit" class="btn btn-success m-2">Save</button>
+            </form>
+        }
+        else
+        {
+            <h4 class="text-center my-3 pb-3">My Information</h4>
+            <table class="able table-hover m-5">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">#</th>
+                        <th scope="col" class="text-center">Picture</th>
+                        <th scope="col" class="text-center">Name</th>
+                        <th scope="col" class="text-center">Family</th>
+                        <th scope="col" class="text-center">Biography</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="text-center">@Model.Information.Id</th>
+                        <td><img src="~/Images/@Model.Information.Picture" width="60" height="50" /></td>
+                        <td class="text-center">@Model.Information.Name</td>
+                        <td class="text-center">@Model.Information.Family</td>
+                        <td class="text-center">@Model.Information.Biography.Substring(0, Math.Min(Model.Information.Biography.Length, 200))</td>
+                        <td>
+                            <button type="button" class="btn btn-warning m-2" data-toggle="modal" data-target="#EditModal">
+                                Edit
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
