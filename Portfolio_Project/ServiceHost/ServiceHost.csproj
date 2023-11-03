@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Areas\Administration\Pages\Information.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.13">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,18 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProjectManagement.Configuration\PortfolioManagement.Configuration.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Areas\Administration\Pages\Information.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Areas\Administration\Pages\Information.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Areas\Administration\Pages\Information.cshtml" />
   </ItemGroup>
 
 </Project>
