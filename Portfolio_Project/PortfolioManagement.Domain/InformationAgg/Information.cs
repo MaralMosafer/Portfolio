@@ -31,7 +31,8 @@ namespace PortfolioManagement.Domain.InformationAgg
             Biography = biography;
             Address = address;
             Email = email;
-            Picture = picture;
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
         }

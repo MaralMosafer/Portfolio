@@ -7,10 +7,12 @@ namespace PortfolioManagement.Application
     public class InformationApplication : IInformationApplication
     {
         private readonly IInformationRepository _informationRepository;
+        private readonly IFileUploader _fileUploader;
 
-        public InformationApplication(IInformationRepository informationRepository)
+        public InformationApplication(IInformationRepository informationRepository, IFileUploader fileUploader)
         {
             _informationRepository = informationRepository;
+            _fileUploader = fileUploader;
         }
 
         public OperationResult Create(CreateInformation command)
@@ -19,7 +21,8 @@ namespace PortfolioManagement.Application
 
             if (_informationRepository.CheckDataExists() == false)
             {
-                var information = new Information(command.Name, command.Family, command.Biography, command.Address, command.Email, command.Picture, command.PictureAlt, command.PictureTitle);
+                var file = _fileUploader.Upload(command.Picture,"Resume");
+                var information = new Information(command.Name, command.Family, command.Biography, command.Address, command.Email, file, command.PictureAlt, command.PictureTitle);
                 _informationRepository.CreateAndSave(information);
                 _informationRepository.SaveChanges();
             }
@@ -32,8 +35,9 @@ namespace PortfolioManagement.Application
 
             if (_informationRepository.CheckDataExists() == true)
             {
+                var file = _fileUploader.Upload(command.Picture, "Resume");
                 var information = _informationRepository.GetBy(command.Id);
-                information.Edit(command.Name, command.Family, command.Biography, command.Address, command.Email, command.Picture, command.PictureAlt, command.PictureTitle);
+                information.Edit(command.Name, command.Family, command.Biography, command.Address, command.Email, file, command.PictureAlt, command.PictureTitle);
                 _informationRepository.SaveChanges();
             }
             return operationResult.Successful();

@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace PortfolioManagement.Application.Contracts.Information
@@ -21,8 +22,7 @@ namespace PortfolioManagement.Application.Contracts.Information
         [MaxLength(300, ErrorMessage = ValidationMessages.MaxLenght)]
         public string Email { get; set; } = string.Empty;
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
-        [MaxLength(2000, ErrorMessage = ValidationMessages.MaxLenght)]
-        public string Picture { get; set; } = string.Empty;
+        public IFormFile Picture { get; set; }
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
         [MaxLength(100, ErrorMessage = ValidationMessages.MaxLenght)]
         public string PictureAlt { get; set; } = string.Empty;

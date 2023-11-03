@@ -1,4 +1,6 @@
+using _0_Framework.Application;
 using ProjectManagement.Configuration;
+using ServiceHost;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 {
     PortfolioManagementBootstrapper.Configure(builder.Services, builder.Configuration.GetConnectionString("PortfolioDB"));
+    builder.Services.AddTransient<IFileUploader,FileUploader>();
 }
 
 var app = builder.Build();

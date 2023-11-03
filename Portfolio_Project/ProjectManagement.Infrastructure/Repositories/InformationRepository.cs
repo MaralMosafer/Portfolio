@@ -22,7 +22,6 @@ namespace ProjectManagement.Infrastructure.Repositories
                 Email = i.Email,
                 Family = i.Family,
                 Address = i.Address,
-                Picture = i.Picture,
                 Biography = i.Biography,
                 PictureAlt = i.PictureAlt,
                 PictureTitle = i.PictureTitle
@@ -37,6 +36,7 @@ namespace ProjectManagement.Infrastructure.Repositories
                 Name = i.Name,
                 Family = i.Family,
                 Picture = i.Picture,
+                Biography=i.Biography
             }).SingleOrDefault();
         }
     }
