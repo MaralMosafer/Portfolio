@@ -26,5 +26,10 @@ namespace ServiceHost.Areas.Administration.Pages
                 Message = result.Message;
             return RedirectToPage("/Information");
         }
+        public RedirectToPageResult OnPostEdit(EditInformation command)
+        {
+            _informationApplication.Edit(command);
+            return RedirectToPage("/Information");
+        }
     }
 }

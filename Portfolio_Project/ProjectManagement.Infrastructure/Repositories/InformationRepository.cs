@@ -36,7 +36,11 @@ namespace ProjectManagement.Infrastructure.Repositories
                 Name = i.Name,
                 Family = i.Family,
                 Picture = i.Picture,
-                Biography=i.Biography
+                Biography = i.Biography,
+                Address = i.Address,
+                Email = i.Email,
+                PictureAlt = i.PictureAlt,
+                PictureTitle = i.PictureTitle
             }).SingleOrDefault();
         }
     }
