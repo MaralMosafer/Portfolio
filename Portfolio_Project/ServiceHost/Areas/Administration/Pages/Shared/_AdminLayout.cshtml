@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>DarkPan - @ViewData["Title"]</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
@@ -42,7 +42,7 @@
                         <h6 class="mb-0">Jhon Doe</h6>
                         <span>Admin</span>
                     </div>
-                </div> 
+                </div>
                 @await Component.InvokeAsync("Menu");
             </nav>
         </div>
@@ -75,6 +75,12 @@
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
+    <div id="MainModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-secondary" id="ModalContent">
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/Admin/lib/chart/chart.min.js"></script>
@@ -89,6 +95,7 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
     <script src="~/Admin/js/main.js"></script>
+    <script src="~/Admin/js/site.js"></script>
 </body>
 
 </html>

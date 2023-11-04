@@ -4,15 +4,16 @@
 
 <div class="navbar-nav w-100">
     <a asp-page="/Index" class="nav-item nav-link @(currentPage == "/Administration" ? "active" : "")"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-@*    <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
-        <div class="dropdown-menu bg-transparent border-0">
-            <a href="button.html" class="dropdown-item">Buttons</a>
-            <a href="typography.html" class="dropdown-item">Typography</a>
-            <a href="element.html" class="dropdown-item">Other Elements</a>
-        </div>
+    @*    <div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
+    <div class="dropdown-menu bg-transparent border-0">
+    <a href="button.html" class="dropdown-item">Buttons</a>
+    <a href="typography.html" class="dropdown-item">Typography</a>
+    <a href="element.html" class="dropdown-item">Other Elements</a>
+    </div>
     </div>*@
     <a asp-page="/Information" class="nav-item nav-link @(currentPage == "/Administration/Information" ? "active" : "")"><i class="fa fa-exclamation-circle me-2"></i>Information</a>
     <a asp-page="/Biography" class="nav-item nav-link @(currentPage == "/Administration/Biography" ? "active" : "")"><i class="fa fa-exclamation-circle me-2"></i>Biography</a>
+    <a asp-page="/Education/Index" class="nav-item nav-link @(currentPage == "/Administration/Education/Index" ? "active" : "")"><i class="fa fa-exclamation-circle me-2"></i>Education</a>
 </div>
 <!-- Menu -->
