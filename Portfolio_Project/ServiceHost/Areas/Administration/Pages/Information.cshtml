@@ -88,75 +88,74 @@
                     </tr>
                 </tbody>
             </table>
-        }
 
-        <!-- Modal -->
-        <div class="modal fade" id="EditModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content bg-secondary">
-                    <form asp-page-handler="Edit"
-                          method="post"
-                          enctype="multipart/form-data">
-                        <input type="hidden" value="@Model.Information.Id" name="id">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="EditModalLabel">Edit General Information</h5>
-                            <button type="button" class="close ml-1" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                            <div class="form-floating mb-3">
-                                <input type="text" name="Name" class="form-control" id="floatingInput" value="@Model.Information.Name" required>
-                                <label for="floatingInput">Name</label>
+            <!-- Modal -->
+            <div class="modal fade" id="EditModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-secondary">
+                        <form asp-page-handler="Edit"
+                              method="post"
+                              enctype="multipart/form-data">
+                            <input type="hidden" value="@Model.Information.Id" name="id">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="EditModalLabel">Edit General Information</h5>
+                                <button type="button" class="close ml-1" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
+                            <div class="modal-body">
 
-                            <div class="form-floating mb-3">
-                                <input type="text" name="Family" class="form-control" id="floatingInput" value="@Model.Information.Family" required>
-                                <label for="floatingInput">Family</label>
-                            </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="Name" class="form-control" id="floatingInput" value="@Model.Information.Name" required>
+                                    <label for="floatingInput">Name</label>
+                                </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" name="Address" class="form-control" id="floatingInput" value="@Model.Information.Address" required>
-                                <label for="floatingInput">Address</label>
-                            </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="Family" class="form-control" id="floatingInput" value="@Model.Information.Family" required>
+                                    <label for="floatingInput">Family</label>
+                                </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="email" name="Email" class="form-control" id="floatingInput" value="@Model.Information.Email" required>
-                                <label for="floatingInput">Email</label>
-                            </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="Address" class="form-control" id="floatingInput" value="@Model.Information.Address" required>
+                                    <label for="floatingInput">Address</label>
+                                </div>
 
-                            <div class="mb-3">
-                                <label for="formFile" name="Picture" class="form-label">Picture</label>
-                                <input type="file" name="Picture" class="form-control form-control-sm bg-dark" id="formFileSm" accept="image/*" value="@Model.Information.Picture">
-                            </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" name="Email" class="form-control" id="floatingInput" value="@Model.Information.Email" required>
+                                    <label for="floatingInput">Email</label>
+                                </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" name="PictureAlt" class="form-control" id="floatingInput" value="@Model.Information.PictureAlt" required>
-                                <label for="floatingInput">PictureAlt</label>
-                            </div>
+                                <div class="mb-3">
+                                    <label for="formFile" name="Picture" class="form-label">Picture</label>
+                                    <input type="file" name="Picture" class="form-control form-control-sm bg-dark" id="formFileSm" accept="image/*" value="@Model.Information.Picture">
+                                </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" name="PictureTitle" class="form-control" id="floatingInput" value="@Model.Information.PictureTitle" required>
-                                <label for="floatingInput">PictureTitle</label>
-                            </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="PictureAlt" class="form-control" id="floatingInput" value="@Model.Information.PictureAlt" required>
+                                    <label for="floatingInput">PictureAlt</label>
+                                </div>
 
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" name="Biography" id="floatingTextarea" style="height: 150px;" required>@Model.Information.Biography</textarea>
-                                <label for="floatingInput">Biography</label>
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="PictureTitle" class="form-control" id="floatingInput" value="@Model.Information.PictureTitle" required>
+                                    <label for="floatingInput">PictureTitle</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" name="Biography" id="floatingTextarea" style="height: 150px;" required>@Model.Information.Biography</textarea>
+                                    <label for="floatingInput">Biography</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger ml-2" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-success">Save Changes</button>
-                        </div>
-                    </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger ml-2" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-success">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <!-- Modal -->
-
+            <!-- Modal -->
+        }
     </div>
 </div>

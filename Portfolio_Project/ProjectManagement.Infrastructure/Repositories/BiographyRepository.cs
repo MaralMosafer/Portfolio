@@ -34,7 +34,7 @@ namespace ProjectManagement.Infrastructure.Repositories
             return _context.Biography.Select(b => new BiographyViewModel
             {
                 Id = b.Id,
-                Adress = b.Address,
+                Address = b.Address,
                 Age = b.Age,
                 Birthday = b.Birthday,
                 Description = b.Description,
