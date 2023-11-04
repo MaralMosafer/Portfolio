@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PortfolioManagement.Domain.BiographyAgg;
+using PortfolioManagement.Domain.EducationAgg;
 using PortfolioManagement.Domain.InformationAgg;
 using ProjectManagement.Infrastructure.Mappings;
-using System.Data;
 
 namespace ProjectManagement.Infrastructure
 {
@@ -10,6 +10,7 @@ namespace ProjectManagement.Infrastructure
     {
         public DbSet<Information> Information { get; set; }
         public DbSet<Biography> Biography { get; set; }
+        public DbSet<Education> Education { get; set; }
         public PortfolioContext(DbContextOptions<PortfolioContext> options) : base(options)
         {
 
