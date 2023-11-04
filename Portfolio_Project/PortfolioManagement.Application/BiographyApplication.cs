@@ -17,7 +17,7 @@ namespace PortfolioManagement.Application
         {
             if (_biographyRepository.CheckDataExists() == false)
             {
-                var biography = new Biography(command.Description, command.Fullname, command.Birthday, command.Age, command.Languages, command.Nationality, command.Adress, command.Mobile, command.Email);
+                var biography = new Biography(command.Description, command.Fullname, command.Birthday, command.Age, command.Languages, command.Nationality, command.Address, command.Mobile, command.Email);
                 _biographyRepository.CreateAndSave(biography);
                 _biographyRepository.SaveChanges();
             }
@@ -30,7 +30,7 @@ namespace PortfolioManagement.Application
             if (_biographyRepository.CheckDataExists() == true)
             {
                 var biography = _biographyRepository.GetBy(command.Id);
-                biography.Edit(command.Description, command.Fullname, command.Birthday, command.Age, command.Languages, command.Nationality, command.Adress, command.Mobile, command.Email);
+                biography.Edit(command.Description, command.Fullname, command.Birthday, command.Age, command.Languages, command.Nationality, command.Address, command.Mobile, command.Email);
                 _biographyRepository.SaveChanges();
             }
             var operationResult = new OperationResult();

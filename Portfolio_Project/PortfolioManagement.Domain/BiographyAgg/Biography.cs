@@ -10,12 +10,11 @@ namespace PortfolioManagement.Domain.BiographyAgg
         public int Age { get; private set; }
         public string Languages { get; private set; } = string.Empty;
         public string Nationality { get; private set; } = string.Empty;
-        public string Adress { get; private set; } = string.Empty;
+        public string Address { get; private set; } = string.Empty;
         public string Mobile { get; private set; } = string.Empty;
         public string Email { get; private set; } = string.Empty;
 
-
-        public Biography(string description, string fullname, string birthday, int age, string languages, string nationality, string adress, string mobile, string email)
+        public Biography(string description, string fullname, string birthday, int age, string languages, string nationality, string address, string mobile, string email)
         {
             Description = description;
             Fullname = fullname;
@@ -23,11 +22,11 @@ namespace PortfolioManagement.Domain.BiographyAgg
             Age = age;
             Languages = languages;
             Nationality = nationality;
-            Adress = adress;
+            Address = address;
             Mobile = mobile;
             Email = email;
         }
-        public void Edit(string description, string fullname, string birthday, int age, string languages, string nationality, string adress, string mobile, string email)
+        public void Edit(string description, string fullname, string birthday, int age, string languages, string nationality, string address, string mobile, string email)
         {
             Description = description;
             Fullname = fullname;
@@ -35,7 +34,7 @@ namespace PortfolioManagement.Domain.BiographyAgg
             Age = age;
             Languages = languages;
             Nationality = nationality;
-            Adress = adress;
+            Address = address;
             Mobile = mobile;
             Email = email;
         }

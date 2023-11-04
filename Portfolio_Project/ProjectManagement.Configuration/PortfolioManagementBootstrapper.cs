@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using PortfolioManagement.Application;
+using PortfolioManagement.Application.Contracts.Biography;
 using PortfolioManagement.Application.Contracts.Information;
+using PortfolioManagement.Domain.BiographyAgg;
 using PortfolioManagement.Domain.InformationAgg;
 using ProjectManagement.Infrastructure;
 using ProjectManagement.Infrastructure.Repositories;
@@ -17,8 +19,10 @@ namespace ProjectManagement.Configuration
                 options.UseSqlServer(ConnectionString);
             });
             services.AddTransient<IInformationApplication, InformationApplication>();
-            services.AddTransient<IInformationRepository,  InformationRepository>();
+            services.AddTransient<IInformationRepository, InformationRepository>();
 
+            services.AddTransient<IBiographyApplication, BiographyApplication>();
+            services.AddTransient<IBiographyRepository, BiographyRepository>();
         }
     }
 }
