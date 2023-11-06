@@ -3,9 +3,11 @@ using Microsoft.Extensions.DependencyInjection;
 using PortfolioManagement.Application;
 using PortfolioManagement.Application.Contracts.Biography;
 using PortfolioManagement.Application.Contracts.Education;
+using PortfolioManagement.Application.Contracts.Experience;
 using PortfolioManagement.Application.Contracts.Information;
 using PortfolioManagement.Domain.BiographyAgg;
 using PortfolioManagement.Domain.EducationAgg;
+using PortfolioManagement.Domain.ExperienceAgg;
 using PortfolioManagement.Domain.InformationAgg;
 using PortfolioManagement.Infrastructure.Repositories;
 using ProjectManagement.Infrastructure;
@@ -29,6 +31,9 @@ namespace ProjectManagement.Configuration
 
             services.AddTransient<IEducationApplication, EducationApplication>();
             services.AddTransient<IEducationRepository, EducationRepository>();
+
+            services.AddTransient<IExperienceApplication, ExperienceApplication>();
+            services.AddTransient<IExperienceRepository, ExperienceRepository>();
         }
     }
 }
