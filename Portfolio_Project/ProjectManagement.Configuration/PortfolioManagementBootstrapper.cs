@@ -5,11 +5,13 @@ using PortfolioManagement.Application.Contracts.Biography;
 using PortfolioManagement.Application.Contracts.Education;
 using PortfolioManagement.Application.Contracts.Experience;
 using PortfolioManagement.Application.Contracts.Information;
+using PortfolioManagement.Application.Contracts.Service;
 using PortfolioManagement.Application.Contracts.Skill;
 using PortfolioManagement.Domain.BiographyAgg;
 using PortfolioManagement.Domain.EducationAgg;
 using PortfolioManagement.Domain.ExperienceAgg;
 using PortfolioManagement.Domain.InformationAgg;
+using PortfolioManagement.Domain.ServiceAgg;
 using PortfolioManagement.Domain.SkillAgg;
 using PortfolioManagement.Infrastructure.Repositories;
 using ProjectManagement.Infrastructure;
@@ -39,6 +41,9 @@ namespace ProjectManagement.Configuration
 
             services.AddTransient<ISkillApplication, SkillApplication>();
             services.AddTransient<ISkillRepository, SkillRepository>();
+
+            services.AddTransient<IServiceApplication, ServiceApplication>();
+            services.AddTransient<IServiceRepository, ServiceRepository>();
         }
     }
 }
