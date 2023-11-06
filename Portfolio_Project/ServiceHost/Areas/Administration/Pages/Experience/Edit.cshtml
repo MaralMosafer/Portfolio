@@ -1,0 +1,58 @@
+﻿@model PortfolioManagement.Application.Contracts.Experience.EditExperience
+
+
+<div class="modal-header">
+    <h5 class="modal-title" id="EditModalLabel">Edit @Model.Place</h5>
+    <button type="button" class="close ml-1" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+</div>
+<form asp-page="./Index" asp-page-handler="Edit"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+
+
+    <div class="modal-body">
+
+        <div class="form-floating mb-3">
+            <input type="text" name="Place" class="form-control" id="floatingInput" required asp-for="Place">
+            <label for="floatingInput">Place</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" name="Title" class="form-control" id="floatingInput" required asp-for="Title">
+            <label for="floatingInput">Title</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" name="Description" class="form-control" id="floatingInput" required asp-for="Description">
+            <label for="floatingInput">Description</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" name="StartDate" class="form-control" id="floatingInput" required asp-for="StartDate">
+            <label for="floatingInput">StartDate</label>
+        </div>
+
+
+        <div class="form-floating mb-3">
+            <input type="text" name="EndDate" class="form-control" id="floatingInput" required asp-for="EndDate">
+            <label for="floatingInput">EndDate</label>
+        </div>
+
+    </div>
+
+    <input type="hidden" value="@Model.Id" name="Id" />
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger ml-2" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Save Changes</button>
+    </div>
+</form>
+
+
+
+
+

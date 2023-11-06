@@ -47,7 +47,7 @@ namespace PortfolioManagement.Application
             return _experienceRepository.GetAll();
         }
 
-        public EditExperience GetDetails(long id)
+        public EditExperience GetDetailsBy(long id)
         {
             return _experienceRepository.GetDetails(id);
         }

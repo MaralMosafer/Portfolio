@@ -6,7 +6,7 @@ namespace PortfolioManagement.Application.Contracts.Experience
     {
         OperationResult Create(CreateExperience command);
         OperationResult Edit(EditExperience command);
-        EditExperience GetDetails(long id);
+        EditExperience GetDetailsBy(long id);
         List<ExperienceViewModel> GetAll();
     }
 }

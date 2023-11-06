@@ -1,0 +1,88 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Experience.IndexModel
+@{
+    ViewData["Title"] = "Experiences";
+}
+
+<div id="MainModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-secondary" id="ModalContent">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row bg-secondary rounded align-items-center justify-content-center mx-0">
+        <h6 class="mb-5 mt-5">Experiencees</h6>
+
+        @if (Model.Message != null)
+        {
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <i class="fa fa-close me-2"></i>@Model.Message
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <form role="form" method="post" asp-page-handler="Create" enctype="multipart/form-data" class="m-5">
+
+            <div class="form-floating mb-3">
+                <input type="text" name="Place" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">Place</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" name="Title" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">Title</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" name="Description" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">Description</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" name="StartDate" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">StartDate</label>
+            </div>
+
+
+            <div class="form-floating mb-3">
+                <input type="text" name="EndDate" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">EndDate</label>
+            </div>
+
+            <button type="submit" class="btn btn-success m-2">Save</button>
+        </form>
+
+        <table class="able table-hover m-5">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col" class="text-center">Place</th>
+                    <th scope="col" class="text-center">Title</th>
+                    <th scope="col" class="text-center">StartDate</th>
+                    <th scope="col" class="text-center">EndDate</th>
+                    <th scope="col" class="text-center">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var education in Model.Experience)
+                {
+                    <tr>
+                        <th scope="row" class="text-center">@education.Id</th>
+                        <td class="text-center">@education.Place</td>
+                        <td class="text-center">@education.Title</td>
+                        <td class="text-center">@education.StartDate</td>
+                        <td class="text-center">@education.EndDate</td>
+                        <td class="text-center">@education.Description.Substring(0, Math.Min(education.Description.Length, 50)) ...</td>
+                        <td>
+                            <a class="btn btn-warning m-2" href="#showmodal=@Url.Page("./Index", "Edit", new { id = education.Id})">
+                                Edit
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
