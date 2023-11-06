@@ -9,7 +9,6 @@ namespace PortfolioManagement.Application.Contracts.Skill
         [MaxLength(100, ErrorMessage = ValidationMessages.MaxLenght)]
         public string Name { get; set; } = string.Empty;
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
-        [MaxLength(3, ErrorMessage = ValidationMessages.MaxLenght)]
         public int Value { get; set; }
     }
 }
