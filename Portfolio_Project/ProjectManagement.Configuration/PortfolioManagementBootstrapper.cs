@@ -1,4 +1,6 @@
 ﻿using _1_PortfolioQuery.Contracts.BiographyModel;
+using _1_PortfolioQuery.Contracts.EducationModel;
+using _1_PortfolioQuery.Contracts.ExperienceModel;
 using _1_PortfolioQuery.Contracts.InformationModel;
 using _1_PortfolioQuery.Query;
 using Microsoft.EntityFrameworkCore;
@@ -59,6 +61,8 @@ namespace ProjectManagement.Configuration
 
 			services.AddTransient<IInformationQuery, InformationQuery>();
 			services.AddTransient<IBiographyQuery, BiographyQuery>();
+			services.AddTransient<IEducationQuery, EducationQuery>();
+			services.AddTransient<IExperienceQuery, ExperienceQuery>();
 		}
     }
 }

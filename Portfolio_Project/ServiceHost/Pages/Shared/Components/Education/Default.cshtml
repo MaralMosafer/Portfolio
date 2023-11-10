@@ -1,0 +1,24 @@
+﻿@model List<_1_PortfolioQuery.Contracts.EducationModel.EducationQueryModel>
+
+<section id="cv_education">
+    <div class="section_title">
+        <h3>Education</h3>
+    </div>
+    <div class="fn_cs_boxed_list">
+        <ul>
+            @foreach (var education in Model)
+            {
+                <li>
+                    <div class="item">
+                        <div class="item_top">
+                            <h5>@education.University</h5>
+                            <span>( @education.StartDate — @education.EndDate )</span>
+                        </div>
+                        <h3>@education.Title</h3>
+                        <p>@education.Description</p>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</section>
