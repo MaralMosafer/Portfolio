@@ -13,7 +13,9 @@ namespace PortfolioManagement.Infrastructure.Mappings
 
             builder.Property(x => x.Name).HasMaxLength(100).IsRequired();
 
-            //will Add Relation
+            builder.HasMany(x => x.WorkSamples)
+                .WithOne(x => x.Category)
+                .HasForeignKey(x=>x.CategoryId);
         }
     }
 }
