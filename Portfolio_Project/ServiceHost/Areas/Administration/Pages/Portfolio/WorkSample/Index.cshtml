@@ -1,0 +1,108 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Portfolio.WorkSample.IndexModel
+@{
+    ViewData["Title"] = "WorkSample";
+}
+
+<div id="MainModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-secondary" id="ModalContent">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row bg-secondary rounded align-items-center justify-content-center mx-0">
+        <h6 class="mb-5 mt-5">Work Sample</h6>
+
+        @if (Model.Message != null)
+        {
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <i class="fa fa-close me-2"></i>@Model.Message
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <form role="form" method="post" asp-page-handler="Create" enctype="multipart/form-data" class="m-5">
+
+            <div class="form-floating mb-3">
+                <input type="text" name="Name" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">Name</label>
+            </div>
+
+            <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example" asp-items="Model.Categories" name="CategoryId">
+                <option value="0" selected="">Select Category...</option>
+            </select>
+
+            <div class="mb-3">
+                <label for="formFile" name="Picture" class="form-label">Picture</label>
+                <input type="file" name="Picture" class="form-control form-control-sm bg-dark" id="formFileSm" accept="image/*" required>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" name="PictureAlt" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">PictureAlt</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" name="PictureTitle" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">PictureTitle</label>
+            </div>
+
+            <button type="submit" class="btn btn-success m-2">Save</button>
+        </form>
+
+        <table class="able table-hover m-5">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col" class="text-center">Name</th>
+                    <th scope="col" class="text-center">Picture</th>
+                    <th scope="col" class="text-center">Category</th>
+                    <th scope="col" class="text-center">Status</th>
+                    <th scope="col" class="text-center">Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var sample in Model.workSample)
+                {
+                    <tr>
+                        <th scope="row" class="text-center">@sample.Id</th>
+                        <td class="text-center">@sample.Name</td>
+                        <td class="text-center">
+                            <div class="d-flex justify-content-center">
+                                <img src="~/Images/@sample.Picture" width="90" height="100" />
+                            </div>
+                        </td>
+                        <td class="text-center">@sample.Category</td>
+                        <td class="text-center">
+                            @if (sample.IsActive)
+                            {
+                                <i class="fa fa-check fa-2x text-success"></i>
+                            }
+                            else
+                            {
+                                <i class="fa fa-times fa-2x text-danger"></i>
+                            }
+                        </td>
+                        <td class ="text-center">
+                            <a class="btn btn-warning m-2" href="#showmodal=@Url.Page("./Index", "Edit", new { id = sample.Id})">
+                                Edit
+                            </a>
+                            @if (sample.IsActive)
+                            {
+                                <a asp-page="./Index" asp-page-handler="Remove" asp-route-id="@sample.Id"
+                                   class="btn btn-danger waves-effect m-b-5">Remove</a>
+                            }
+                            else
+                            {
+                                <a asp-page="./Index" asp-page-handler="Active" asp-route-id="@sample.Id"
+                                   class="btn btn-success waves-effect m-b-5">Active</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

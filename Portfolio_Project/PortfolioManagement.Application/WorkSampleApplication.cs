@@ -14,6 +14,13 @@ namespace PortfolioManagement.Application
             _fileUploader = fileUploader;
         }
 
+        public void Active(long id)
+        {
+            var sample = _workSampleRepository.GetBy(id);
+            sample.Active();
+            _workSampleRepository.SaveChanges();
+        }
+
         public OperationResult Create(CreateWorkSample command)
         {
             var operationResult = new OperationResult();
@@ -52,6 +59,13 @@ namespace PortfolioManagement.Application
         public EditWorkSample GetDetailsBy(long id)
         {
             return _workSampleRepository.GetDetailsBy(id);
+        }
+
+        public void Remove(long id)
+        {
+            var sample = _workSampleRepository.GetBy(id);
+            sample.Remove();
+            _workSampleRepository.SaveChanges();
         }
     }
 }

@@ -8,5 +8,7 @@ namespace PortfolioManagement.Application.Contracts.WorkSample
         OperationResult Edit(EditWorkSample command);
         EditWorkSample GetDetailsBy(long id);
         List<WorkSampleViewModel> GetAll();
+        void Remove(long id);
+        void Active(long id);
     }
 }
