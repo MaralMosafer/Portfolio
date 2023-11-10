@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ServiceHost.ViewComponents
 {
-	public class CvHeaderViewComponent : ViewComponent
+    public class CvHeaderViewComponent : ViewComponent
 	{
 		private readonly IInformationQuery _query;
 

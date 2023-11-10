@@ -1,0 +1,20 @@
+﻿@model _1_PortfolioQuery.Contracts.BiographyModel.BiographyQueryModel
+
+<section id="cv_biography">
+    <div class="section_title">
+        <h3>Biography</h3>
+    </div>
+    <p>@Model.Description</p>
+    <div class="fn_cs_info_items">
+        <ul>
+            <li><p>Name: <span>@Model.Fullname</span></p></li>
+            <li><p>Birthday: <span>@Model.Birthday</span></p></li>
+            <li><p>Languages: <span>@Model.Languages</span></p></li>
+            <li><p>Age: <span>@Model.Age Years</span></p></li>
+            <li><p>Nationality: <span>@Model.Nationality</span></p></li>
+            <li><p>Adress: <span>@Model.Address</span></p></li>
+            <li><p>Phone: <span>@Model.Mobile</span></p></li>
+            <li><p>Email: <span><a href="mailto:@Model.Email">@Model.Email</a></span></p></li>
+        </ul>
+    </div>
+</section>

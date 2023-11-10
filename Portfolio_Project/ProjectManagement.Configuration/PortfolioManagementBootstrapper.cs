@@ -1,4 +1,5 @@
-﻿using _1_PortfolioQuery.Contracts.InformationModel;
+﻿using _1_PortfolioQuery.Contracts.BiographyModel;
+using _1_PortfolioQuery.Contracts.InformationModel;
 using _1_PortfolioQuery.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -57,6 +58,7 @@ namespace ProjectManagement.Configuration
             services.AddTransient<IWorkSampleRepository, WorkSampleRepository>();
 
 			services.AddTransient<IInformationQuery, InformationQuery>();
+			services.AddTransient<IBiographyQuery, BiographyQuery>();
 		}
     }
 }
