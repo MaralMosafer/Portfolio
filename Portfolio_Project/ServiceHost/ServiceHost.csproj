@@ -26,6 +26,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\js\animated-headlines.js" />
+    <None Include="wwwroot\js\ie8.js" />
+    <None Include="wwwroot\js\init.js" />
+    <None Include="wwwroot\js\isotope.js" />
+    <None Include="wwwroot\js\jquery.js" />
+    <None Include="wwwroot\js\magnific.js" />
+    <None Include="wwwroot\js\modernizr.custom.js" />
+    <None Include="wwwroot\js\waypoints.js" />
+    <None Include="wwwroot\modal\contact.php" />
+    <None Include="wwwroot\svg\call.svg" />
+    <None Include="wwwroot\svg\facebook-logo.svg" />
+    <None Include="wwwroot\svg\five-stars.svg" />
+    <None Include="wwwroot\svg\instagram.svg" />
+    <None Include="wwwroot\svg\location.svg" />
+    <None Include="wwwroot\svg\message.svg" />
+    <None Include="wwwroot\svg\pinterest.svg" />
+    <None Include="wwwroot\svg\stick-man.svg" />
+    <None Include="wwwroot\svg\twitter.svg" />
+    <None Include="wwwroot\svg\youtube.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="Areas\Administration\Pages\Portfolio\Category\Edit.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

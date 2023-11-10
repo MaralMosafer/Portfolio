@@ -3,49 +3,143 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ServiceHost</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ServiceHost.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Maral Mosafer</title>
+    
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+	<!-- Styles -->
+	<link type="text/css" rel="stylesheet" href="~/css/base.css?ver=4" />
+	<link type="text/css" rel="stylesheet" href="~/css/magnific.css?ver=4" />
+	<link type="text/css" rel="stylesheet" href="~/css/animated-headlines.css?ver=4" />
+	<link type="text/css" rel="stylesheet" href="~/css/style.css?ver=4" />
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">ServiceHost</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - ServiceHost - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+	<div class="deebo_fn_main">
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+
+
+		<!-- Overlay -->
+		<div class="right_bar_overlay"></div>
+
+		<!-- MODALBOX -->
+		<div class="deebo_fn_modalbox">
+			<a class="extra_closer" href="#"></a>
+			<div class="box_inner">
+				<a class="closer" href="#"><span></span></a>
+				<div class="modal_content">
+
+					<div class="modal_in">
+						<!-- Content comes from JS -->
+					</div>
+
+					<div class="fn__nav" data-from="" data-index="">
+						<a href="#" class="prev">
+							<span class="text">Prev</span>
+							<span class="arrow_wrapper"><span class="arrow"></span></span>
+						</a>
+						<a href="#" class="next">
+							<span class="text">Next</span>
+							<span class="arrow_wrapper"><span class="arrow"></span></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /MODALBOX -->
+		<!-- Overlay -->
+		<div class="right_bar_overlay"></div>
+		<!--/ Overlay -->
+
+		<!-- Modal CV Card -->
+		<div class="deebo_fn_cv">
+
+			<!-- CV Inner -->
+			<div class="deebo_fn__cv">
+
+				<!-- CV Background -->
+				<div class="cv__bg"></div>
+				<div class="cv__bg2"></div>
+				<!-- /CV Background -->
+				<!-- CV Left Side -->
+				<div class="cv__header">
+					<div class="in">
+						<div class="avatar">
+							<img src="img/header/1.jpg" alt="">
+						</div>
+						<h3><span>Adam</span> Milner</h3>
+						<p class="quote">I'm a passionate front-end web developer who excels at creating pixel-perfect web interfaces. I’m available for a freelance job. <a href="#contact" class="anchor">Hire me</a></p>
+						<ul class="contact_info">
+							<li>
+								<span class="icon"><img src="svg/location.svg" alt="" class="fn__svg"></span>
+								<p>69 Queen St, Melbourne Australia</p>
+							</li>
+							<li>
+								<span class="icon"><img src="svg/call.svg" alt="" class="fn__svg"></span>
+								<p>(+706) 898-0751</p>
+							</li>
+							<li>
+								<span class="icon"><img src="svg/message.svg" alt="" class="fn__svg"></span>
+								<p>adam_milner@example.com</p>
+							</li>
+						</ul>
+						<ul class="social">
+							<li>
+								<a href="#" target="_blank" title="twitter.com">
+									<img class="fn__svg" src="svg/twitter.svg" alt="twitter.com" />
+								</a>
+							</li>
+							<li>
+								<a href="#" target="_blank" title="facebook.com">
+									<img class="fn__svg" src="svg/facebook-logo.svg" alt="facebook.com" />
+								</a>
+							</li>
+							<li>
+								<a href="#" target="_blank" title="instagram.com">
+									<img class="fn__svg" src="svg/instagram.svg" alt="instagram.com" />
+								</a>
+							</li>
+							<li>
+								<a href="#" target="_blank" title="printerest.com">
+									<img class="fn__svg" src="svg/pinterest.svg" alt="printerest.com" />
+								</a>
+							</li>
+							<li>
+								<a href="#" target="_blank" title="youtube.com">
+									<img class="fn__svg" src="svg/youtube.svg" alt="youtube.com" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /CV Left Side -->
+				@RenderBody()
+
+
+			</div>
+			<!-- CV Inner -->
+		</div>
+		<!-- /Modal CV Card -->
+
+
+
+	</div>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="~/js/jquery.js?ver=4"></script>
+	<script type="text/javascript" src="~/js/isotope.js"></script>
+	<script type="text/javascript" src="~/js/magnific.js"></script>
+	<script type="text/javascript" src="~/js/animated-headlines.js?ver=4"></script>
+	<script type="text/javascript" src="~/js/waypoints.js?ver=4"></script>
+	<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
+	<script type="text/javascript" src="~/js/init.js?ver=4"></script>
+	<!-- /Scripts -->
+
 </body>
+
 </html>
