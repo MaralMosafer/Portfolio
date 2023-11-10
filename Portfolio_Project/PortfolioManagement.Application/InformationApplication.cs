@@ -22,7 +22,7 @@ namespace PortfolioManagement.Application
             if (_informationRepository.CheckDataExists() == false)
             {
                 var file = _fileUploader.Upload(command.Picture,"Resume");
-                var information = new Information(command.Name, command.Family, command.Biography, command.Address, command.Email, file, command.PictureAlt, command.PictureTitle);
+                var information = new Information(command.Name,command.Family,command.Biography,command.Address,command.Email,command.Mobile,file,command.PictureAlt,command.PictureTitle);
                 _informationRepository.CreateAndSave(information);
                 _informationRepository.SaveChanges();
             }
@@ -37,8 +37,8 @@ namespace PortfolioManagement.Application
             {
                 var file = _fileUploader.Upload(command.Picture, "Resume");
                 var information = _informationRepository.GetBy(command.Id);
-                information.Edit(command.Name, command.Family, command.Biography, command.Address, command.Email, file, command.PictureAlt, command.PictureTitle);
-                _informationRepository.SaveChanges();
+                information.Edit(command.Name, command.Family, command.Biography, command.Address, command.Email, command.Mobile, file, command.PictureAlt, command.PictureTitle);
+				_informationRepository.SaveChanges();
             }
             return operationResult.Successful();
         }

@@ -19,6 +19,7 @@ namespace ProjectManagement.Infrastructure.Mappings
             builder.Property(x => x.Picture).HasMaxLength(2000).IsRequired();
             builder.Property(x => x.PictureAlt).HasMaxLength(100).IsRequired();
             builder.Property(x => x.PictureTitle).HasMaxLength(100).IsRequired();
-        }
+			builder.Property(x => x.Mobile).HasMaxLength(25).IsRequired();
+		}
     }
 }

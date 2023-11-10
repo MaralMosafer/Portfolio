@@ -36,6 +36,11 @@
                     <label for="floatingInput">Email</label>
                 </div>
 
+                <div class="form-floating mb-3">
+                    <input type="text" name="Mobile" class="form-control" id="floatingInput" required>
+                    <label for="floatingInput">Mobile</label>
+                </div>
+
                 <div class="mb-3">
                     <label for="formFile" name="Picture" class="form-label">Picture</label>
                     <input type="file" name="Picture" class="form-control form-control-sm bg-dark" id="formFileSm" accept="image/*" required>
@@ -68,6 +73,7 @@
                         <th scope="col" class="text-center">Picture</th>
                         <th scope="col" class="text-center">Name</th>
                         <th scope="col" class="text-center">Family</th>
+                        <th scope="col" class="text-center">Mobile</th>
                         <th scope="col" class="text-center">Biography</th>
                     </tr>
                 </thead>
@@ -81,6 +87,7 @@
                         </td>
                         <td class="text-center">@Model.Information.Name</td>
                         <td class="text-center">@Model.Information.Family</td>
+                        <td class="text-center">@Model.Information.Mobile</td>
                         <td class="text-center">@Model.Information.Biography.Substring(0, Math.Min(Model.Information.Biography.Length, 50)) ...</td>
                         <td>
                             <button type="button" class="btn btn-warning m-2" data-toggle="modal" data-target="#EditModal">Edit</button>
@@ -123,6 +130,11 @@
                                 <div class="form-floating mb-3">
                                     <input type="email" name="Email" class="form-control" id="floatingInput" value="@Model.Information.Email" required>
                                     <label for="floatingInput">Email</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="Mobile" class="form-control" id="floatingInput" value="@Model.Information.Mobile" required>
+                                    <label for="floatingInput">Mobile</label>
                                 </div>
 
                                 <div class="mb-3">

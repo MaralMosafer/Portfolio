@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _1_PortfolioQuery.Contracts.InformationModel;
+using _1_PortfolioQuery.Query;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using PortfolioManagement.Application;
 using PortfolioManagement.Application.Contracts.Biography;
@@ -53,6 +55,8 @@ namespace ProjectManagement.Configuration
 
             services.AddTransient<IWorkSampleApplication, WorkSampleApplication>();
             services.AddTransient<IWorkSampleRepository, WorkSampleRepository>();
-        }
+
+			services.AddTransient<IInformationQuery, InformationQuery>();
+		}
     }
 }

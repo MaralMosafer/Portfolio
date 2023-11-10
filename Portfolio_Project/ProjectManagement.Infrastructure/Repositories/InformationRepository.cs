@@ -1,11 +1,10 @@
 ﻿using _0_Framework.Infrastructure;
-using Microsoft.EntityFrameworkCore;
 using PortfolioManagement.Application.Contracts.Information;
 using PortfolioManagement.Domain.InformationAgg;
 
 namespace ProjectManagement.Infrastructure.Repositories
 {
-    public class InformationRepository : RepositoryBase<Information>, IInformationRepository
+	public class InformationRepository : RepositoryBase<Information>, IInformationRepository
     {
         private readonly PortfolioContext _context;
         public InformationRepository(PortfolioContext context) : base(context)
@@ -24,7 +23,8 @@ namespace ProjectManagement.Infrastructure.Repositories
                 Address = i.Address,
                 Biography = i.Biography,
                 PictureAlt = i.PictureAlt,
-                PictureTitle = i.PictureTitle
+                PictureTitle = i.PictureTitle,
+                Mobile = i.Mobile,
             }).FirstOrDefault(i => i.Id == id);
         }
 
@@ -40,7 +40,8 @@ namespace ProjectManagement.Infrastructure.Repositories
                 Address = i.Address,
                 Email = i.Email,
                 PictureAlt = i.PictureAlt,
-                PictureTitle = i.PictureTitle
+                PictureTitle = i.PictureTitle,
+                Mobile = i.Mobile
             }).SingleOrDefault();
         }
     }

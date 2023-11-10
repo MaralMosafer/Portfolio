@@ -21,13 +21,8 @@
 
 	<div class="deebo_fn_main">
 
-
-
-
-		<!-- Overlay -->
 		<div class="right_bar_overlay"></div>
 
-		<!-- MODALBOX -->
 		<div class="deebo_fn_modalbox">
 			<a class="extra_closer" href="#"></a>
 			<div class="box_inner">
@@ -35,7 +30,6 @@
 				<div class="modal_content">
 
 					<div class="modal_in">
-						<!-- Content comes from JS -->
 					</div>
 
 					<div class="fn__nav" data-from="" data-index="">
@@ -51,80 +45,21 @@
 				</div>
 			</div>
 		</div>
-		<!-- /MODALBOX -->
-		<!-- Overlay -->
 		<div class="right_bar_overlay"></div>
-		<!--/ Overlay -->
 
-		<!-- Modal CV Card -->
 		<div class="deebo_fn_cv">
 
-			<!-- CV Inner -->
 			<div class="deebo_fn__cv">
 
-				<!-- CV Background -->
 				<div class="cv__bg"></div>
 				<div class="cv__bg2"></div>
-				<!-- /CV Background -->
-				<!-- CV Left Side -->
-				<div class="cv__header">
-					<div class="in">
-						<div class="avatar">
-							<img src="img/header/1.jpg" alt="">
-						</div>
-						<h3><span>Adam</span> Milner</h3>
-						<p class="quote">I'm a passionate front-end web developer who excels at creating pixel-perfect web interfaces. I’m available for a freelance job. <a href="#contact" class="anchor">Hire me</a></p>
-						<ul class="contact_info">
-							<li>
-								<span class="icon"><img src="svg/location.svg" alt="" class="fn__svg"></span>
-								<p>69 Queen St, Melbourne Australia</p>
-							</li>
-							<li>
-								<span class="icon"><img src="svg/call.svg" alt="" class="fn__svg"></span>
-								<p>(+706) 898-0751</p>
-							</li>
-							<li>
-								<span class="icon"><img src="svg/message.svg" alt="" class="fn__svg"></span>
-								<p>adam_milner@example.com</p>
-							</li>
-						</ul>
-						<ul class="social">
-							<li>
-								<a href="#" target="_blank" title="twitter.com">
-									<img class="fn__svg" src="svg/twitter.svg" alt="twitter.com" />
-								</a>
-							</li>
-							<li>
-								<a href="#" target="_blank" title="facebook.com">
-									<img class="fn__svg" src="svg/facebook-logo.svg" alt="facebook.com" />
-								</a>
-							</li>
-							<li>
-								<a href="#" target="_blank" title="instagram.com">
-									<img class="fn__svg" src="svg/instagram.svg" alt="instagram.com" />
-								</a>
-							</li>
-							<li>
-								<a href="#" target="_blank" title="printerest.com">
-									<img class="fn__svg" src="svg/pinterest.svg" alt="printerest.com" />
-								</a>
-							</li>
-							<li>
-								<a href="#" target="_blank" title="youtube.com">
-									<img class="fn__svg" src="svg/youtube.svg" alt="youtube.com" />
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- /CV Left Side -->
+
+				@await Component.InvokeAsync("CvHeader")
 				@RenderBody()
 
 
 			</div>
-			<!-- CV Inner -->
 		</div>
-		<!-- /Modal CV Card -->
 
 
 

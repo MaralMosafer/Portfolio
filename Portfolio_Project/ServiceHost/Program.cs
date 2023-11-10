@@ -9,6 +9,7 @@ builder.Services.AddRazorPages();
 {
     PortfolioManagementBootstrapper.Configure(builder.Services, builder.Configuration.GetConnectionString("PortfolioDB"));
     builder.Services.AddTransient<IFileUploader,FileUploader>();
+
 }
 
 var app = builder.Build();

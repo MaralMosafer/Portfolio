@@ -29,5 +29,8 @@ namespace PortfolioManagement.Application.Contracts.Information
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
         [MaxLength(100, ErrorMessage = ValidationMessages.MaxLenght)]
         public string PictureTitle { get; set; } = string.Empty;
-    }
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
+        [MaxLength(25, ErrorMessage = ValidationMessages.MaxLenght)]
+        public string Mobile { get; set; } = string.Empty;
+	}
 }

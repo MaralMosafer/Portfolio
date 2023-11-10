@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHost", "ServiceHost\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioManagement.Configuration", "ProjectManagement.Configuration\PortfolioManagement.Configuration.csproj", "{FB8AB536-A2EE-4798-BD3D-8E087A208CFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_PortfolioQuery", "1_PortfolioQuery\1_PortfolioQuery.csproj", "{F128715D-6DDB-451C-BE54-71DC67A68409}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{FB8AB536-A2EE-4798-BD3D-8E087A208CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB8AB536-A2EE-4798-BD3D-8E087A208CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB8AB536-A2EE-4798-BD3D-8E087A208CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F128715D-6DDB-451C-BE54-71DC67A68409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F128715D-6DDB-451C-BE54-71DC67A68409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F128715D-6DDB-451C-BE54-71DC67A68409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F128715D-6DDB-451C-BE54-71DC67A68409}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

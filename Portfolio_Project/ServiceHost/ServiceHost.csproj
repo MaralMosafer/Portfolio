@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\1_PortfolioQuery\1_PortfolioQuery.csproj" />
     <ProjectReference Include="..\ProjectManagement.Configuration\PortfolioManagement.Configuration.csproj" />
   </ItemGroup>
 

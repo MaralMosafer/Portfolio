@@ -1,0 +1,52 @@
+﻿@model _1_PortfolioQuery.Contracts.InformationModel.InformationQueryModel
+
+<div class="cv__header">
+    <div class="in">
+        <div class="avatar">
+            <img src="~/Images/@Model.Picture" alt="@Model.PictureAlt" title="@Model.PictureTitle" width="450" height="350">
+        </div>
+        <h3><span>@Model.Name</span> @Model.Family</h3>
+        <p class="quote">@Model.Biography</p>
+        <ul class="contact_info">
+            <li>
+                <span class="icon"><img src="~/svg/location.svg" alt="Location" title="Location" class="fn__svg"></span>
+                <p>@Model.Address</p>
+            </li>
+            <li>
+                <span class="icon"><img src="svg/call.svg" alt="Mobile" title="Mobile" class="fn__svg"></span>
+                <p>@Model.Mobile</p>
+            </li>
+            <li>
+                <span class="icon"><img src="svg/message.svg" alt="Email" title="Email" class="fn__svg"></span>
+                <p>@Model.Email</p>
+            </li>
+        </ul>
+        <ul class="social">
+            <li>
+                <a href="#" target="_blank" title="twitter.com">
+                    <img class="fn__svg" src="svg/twitter.svg" alt="twitter.com" />
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" title="facebook.com">
+                    <img class="fn__svg" src="svg/facebook-logo.svg" alt="facebook.com" />
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" title="instagram.com">
+                    <img class="fn__svg" src="svg/instagram.svg" alt="instagram.com" />
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" title="printerest.com">
+                    <img class="fn__svg" src="svg/pinterest.svg" alt="printerest.com" />
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" title="youtube.com">
+                    <img class="fn__svg" src="svg/youtube.svg" alt="youtube.com" />
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
