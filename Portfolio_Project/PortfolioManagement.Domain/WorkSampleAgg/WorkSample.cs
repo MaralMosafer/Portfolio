@@ -5,7 +5,7 @@ namespace PortfolioManagement.Domain.WorkSampleAgg
 {
     public class WorkSample : DomainBase
     {
-        public string Title { get; private set; } = string.Empty;
+        public string Name { get; private set; } = string.Empty;
         public string Picture { get; private set; } = string.Empty;
         public string PictureAlt { get; private set; } = string.Empty;
         public string PictureTitle { get; private set; } = string.Empty;
@@ -13,18 +13,18 @@ namespace PortfolioManagement.Domain.WorkSampleAgg
         public long CategoryId { get; private set; }
         public WorkSampleCategory Category { get; private set; }
 
-        public WorkSample(string title, string picture, string pictureAlt, string pictureTitle, long categoryId)
+        public WorkSample(string name, string picture, string pictureAlt, string pictureTitle, long categoryId)
         {
-            Title = title;
+            Name = name;
             Picture = picture;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             CategoryId = categoryId;
             IsActive = true;
         }
-        public void Edit(string title, string picture, string pictureAlt, string pictureTitle, long categoryId)
+        public void Edit(string name, string picture, string pictureAlt, string pictureTitle, long categoryId)
         {
-            Title = title;
+            Name = name;
             if (!string.IsNullOrWhiteSpace(picture))
                 Picture = picture;
             PictureAlt = pictureAlt;
