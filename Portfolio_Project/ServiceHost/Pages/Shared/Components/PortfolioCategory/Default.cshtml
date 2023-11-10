@@ -1,0 +1,11 @@
+﻿@model List<_1_PortfolioQuery.Contracts.PortfolioCateoryModel.CategoryQueryModel>
+<div class="portfolio_filter">
+	<ul>
+		<li><a href="#" class="current" data-filter="*">All</a></li>
+		@foreach (var category in Model)
+		{
+			<li><a href="#" data-filter=".@category.Name.Replace(".", "").Replace(" ", "")">@category.Name</a></li>
+		}
+	</ul>
+</div>
+<!-- /Portfolio Filter -->

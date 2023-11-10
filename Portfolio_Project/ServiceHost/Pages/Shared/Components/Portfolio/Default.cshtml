@@ -1,0 +1,24 @@
+﻿@model List<_1_PortfolioQuery.Contracts.PortfolioModel.PortfolioQueryModel>
+<div class="portfolio_list">
+    <ul class="gallery_zoom grid">
+
+        @foreach (var portfolio in Model)
+        {
+            <li class="@portfolio.Category.Replace(".", "").Replace(" ", "") grid-item">
+                <div class="inner">
+                    <div class="entry">
+                        <a class="popup-youtube" href="#">
+                            <img src="~/img/thumb/42-56.jpg" alt="@portfolio.PictureAlt" title="@portfolio.PictureTitle" />
+                            <div class="main" style="background-image: url('/Images/@portfolio.Picture');"></div>
+                            <div class="mobile_title">
+                                <h3>@portfolio.Name</h3>
+                                <span>@portfolio.Category</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul
+    >
+</div>

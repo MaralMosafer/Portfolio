@@ -1,0 +1,26 @@
+﻿@model List<_1_PortfolioQuery.Contracts.ServiceModel.ServiceQueryModel>
+<section id="cv_services">
+    <div class="section_title">
+        <h3>Services</h3>
+    </div>
+    <p>I help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers and growing overall sales.</p>
+    <div class="fn_cs_service_list">
+        <ul>
+            @foreach (var service in Model)
+            {
+                <li>
+                    <div class="item">
+                        <div class="item_left">
+                            <h3>@service.Title</h3>
+                            <p>@service.Description</p>
+                        </div>
+                        <div class="item_right">
+                            <p>Starts from</p>
+                            <h3>$@service.Price</h3>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</section>
