@@ -1,0 +1,21 @@
+﻿@model List<_1_PortfolioQuery.Contracts.SkillModel.SkillQueryModel>
+
+<section id="cv_skills">
+	<div class="section_title">
+		<h3>Professionality</h3>
+	</div>
+
+	<div class="fn_cs_progress_bar">
+		@foreach (var skill in Model)
+		{
+		<div class="progress_item" data-value="@skill.Value">
+			<div class="item_in">
+				<h3 class="progress_title">@skill.Name</h3>
+				<span class="progress_percent"></span>
+				<div class="progress_bg"></div>
+			</div>
+		</div>
+		}
+
+	</div>
+</section>

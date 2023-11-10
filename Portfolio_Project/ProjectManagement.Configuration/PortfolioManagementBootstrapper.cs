@@ -2,6 +2,7 @@
 using _1_PortfolioQuery.Contracts.EducationModel;
 using _1_PortfolioQuery.Contracts.ExperienceModel;
 using _1_PortfolioQuery.Contracts.InformationModel;
+using _1_PortfolioQuery.Contracts.SkillModel;
 using _1_PortfolioQuery.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -63,6 +64,7 @@ namespace ProjectManagement.Configuration
 			services.AddTransient<IBiographyQuery, BiographyQuery>();
 			services.AddTransient<IEducationQuery, EducationQuery>();
 			services.AddTransient<IExperienceQuery, ExperienceQuery>();
+			services.AddTransient<ISkillQuery, SkillQuery>();
 		}
     }
 }
