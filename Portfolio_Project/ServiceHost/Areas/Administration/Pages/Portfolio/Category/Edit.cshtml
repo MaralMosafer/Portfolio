@@ -1,0 +1,37 @@
+﻿@model PortfolioManagement.Application.Contracts.WorkSampleCategory.EditWorkSampleCategory
+
+
+<div class="modal-header">
+    <h5 class="modal-title" id="EditModalLabel">Edit @Model.Name</h5>
+    <button type="button" class="close ml-1" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+</div>
+<form asp-page="./Index" asp-page-handler="Edit"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+
+
+    <div class="modal-body">
+
+        <div class="form-floating mb-3">
+            <input type="text" name="Name" class="form-control" id="floatingInput" required asp-for="Name">
+            <label for="floatingInput">Name</label>
+        </div>
+
+    </div>
+
+    <input type="hidden" value="@Model.Id" name="Id" />
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger ml-2" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Save Changes</button>
+    </div>
+</form>
+
+
+
+
+

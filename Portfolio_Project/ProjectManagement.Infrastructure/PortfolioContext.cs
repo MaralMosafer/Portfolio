@@ -5,6 +5,7 @@ using PortfolioManagement.Domain.ExperienceAgg;
 using PortfolioManagement.Domain.InformationAgg;
 using PortfolioManagement.Domain.ServiceAgg;
 using PortfolioManagement.Domain.SkillAgg;
+using PortfolioManagement.Domain.WorkSampleCategoryAgg;
 using ProjectManagement.Infrastructure.Mappings;
 
 namespace ProjectManagement.Infrastructure
@@ -17,6 +18,7 @@ namespace ProjectManagement.Infrastructure
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<WorkSampleCategory> WorkSampleCategories { get; set; }
         public PortfolioContext(DbContextOptions<PortfolioContext> options) : base(options)
         {
 

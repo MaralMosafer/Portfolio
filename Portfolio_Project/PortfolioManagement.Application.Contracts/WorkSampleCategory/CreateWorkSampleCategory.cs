@@ -2,6 +2,6 @@
 {
     public class CreateWorkSampleCategory
     {
-        public string Name { get; private set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
     }
 }

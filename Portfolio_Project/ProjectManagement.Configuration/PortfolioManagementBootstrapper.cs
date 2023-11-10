@@ -7,12 +7,14 @@ using PortfolioManagement.Application.Contracts.Experience;
 using PortfolioManagement.Application.Contracts.Information;
 using PortfolioManagement.Application.Contracts.Service;
 using PortfolioManagement.Application.Contracts.Skill;
+using PortfolioManagement.Application.Contracts.WorkSampleCategory;
 using PortfolioManagement.Domain.BiographyAgg;
 using PortfolioManagement.Domain.EducationAgg;
 using PortfolioManagement.Domain.ExperienceAgg;
 using PortfolioManagement.Domain.InformationAgg;
 using PortfolioManagement.Domain.ServiceAgg;
 using PortfolioManagement.Domain.SkillAgg;
+using PortfolioManagement.Domain.WorkSampleAgg;
 using PortfolioManagement.Infrastructure.Repositories;
 using ProjectManagement.Infrastructure;
 using ProjectManagement.Infrastructure.Repositories;
@@ -44,6 +46,9 @@ namespace ProjectManagement.Configuration
 
             services.AddTransient<IServiceApplication, ServiceApplication>();
             services.AddTransient<IServiceRepository, ServiceRepository>();
+
+            services.AddTransient<IWorkSampleCategoryApplication, WorkSampleCategoryApplication>();
+            services.AddTransient<IWorkSampleCategoryRepository,  WorkSampleCategoryRepository>();
         }
     }
 }
