@@ -19,10 +19,11 @@ namespace AccountManagement.Domain.AccountAgg
             ProfilePicture = profilePicture;
             RoleId = RoleType.Administrator;
         }
-        public void Edit(string fullname, string email, string profilePicture)
+        public void Edit(string fullname, string email, string password,string profilePicture)
         {
             Fullname = fullname;
             Email = email;
+            Password = password;
             if (!string.IsNullOrWhiteSpace(profilePicture))
                 ProfilePicture = profilePicture;
             RoleId = RoleType.Administrator;
