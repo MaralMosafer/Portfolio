@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using AccountManagement.Configuration;
 using ProjectManagement.Configuration;
 using ServiceHost;
 
@@ -8,8 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 {
     PortfolioManagementBootstrapper.Configure(builder.Services, builder.Configuration.GetConnectionString("PortfolioDB"));
-    builder.Services.AddTransient<IFileUploader,FileUploader>();
-
+    AccountManagementBootstrapper.Configure(builder.Services, builder.Configuration.GetConnectionString("PortfolioDB"));
+    builder.Services.AddTransient<IFileUploader, FileUploader>();
+    builder.Services.AddSingleton<IPasswordHasher, PasswordHasher>();
 }
 
 var app = builder.Build();
