@@ -14,7 +14,7 @@ namespace _1_PortfolioQuery.Query
 
         public List<PortfolioQueryModel> GetAll()
         {
-            return _context.WorkSamples.Select(w => new PortfolioQueryModel
+            return _context.WorkSamples.Where(x=>x.IsActive).Select(w => new PortfolioQueryModel
             {
                 Name = w.Name,
                 Category = w.Category.Name,
