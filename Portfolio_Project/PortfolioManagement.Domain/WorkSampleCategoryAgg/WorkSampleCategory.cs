@@ -10,5 +10,9 @@ namespace PortfolioManagement.Domain.WorkSampleCategoryAgg
         {
             Name = name;
         }
+        public void Edit(string name)
+        {
+            Name = name;
+        }
     }
 }
