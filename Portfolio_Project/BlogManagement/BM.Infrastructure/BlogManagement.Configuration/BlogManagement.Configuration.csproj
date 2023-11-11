@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\1_PortfolioQuery\1_PortfolioQuery.csproj" />
     <ProjectReference Include="..\..\BM.Application\BlogManagement.Application\BlogManagement.Application.csproj" />
     <ProjectReference Include="..\BlogManagement.Infrastructure\BlogManagement.Infrastructure.csproj" />
   </ItemGroup>

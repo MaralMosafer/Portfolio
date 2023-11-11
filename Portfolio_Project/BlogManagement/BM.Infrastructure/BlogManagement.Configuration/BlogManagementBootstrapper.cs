@@ -1,4 +1,6 @@
-﻿using BlogManagement.Application;
+﻿using _1_PortfolioQuery.Contracts.ArticleModel;
+using _1_PortfolioQuery.Query;
+using BlogManagement.Application;
 using BlogManagement.Application.Contracts.Article;
 using BlogManagement.Application.Contracts.ArticleCategory;
 using BlogManagement.Domain.ArticleAgg;
@@ -24,6 +26,8 @@ namespace BlogManagement.Configuration
 
             services.AddTransient<IArticleApplication, ArticleApplication>();
             services.AddTransient<IArticleRepository, ArticleRepository>();
+
+            services.AddTransient<IArticleQuery, ArticleQuery>();
         }
     }
 }

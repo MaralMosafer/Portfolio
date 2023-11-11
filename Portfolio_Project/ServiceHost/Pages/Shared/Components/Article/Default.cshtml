@@ -1,0 +1,50 @@
+﻿@model List<_1_PortfolioQuery.Contracts.ArticleModel.ArticleQueryModel>
+
+<section id="tips" class="section_tips">
+    <div class="section_title">
+        <h3>Latest Articles</h3>
+    </div>
+
+    <div class="tips_content">
+        <ul class="modal_items" data-from="blog" data-count="@Model.Count()">
+
+            @foreach (var article in Model)
+            {
+                
+            <li>
+                <div class="item modal_item" data-index="@article.Id">
+                    <div class="item_left">
+                        <p>@article.CreationDate</p>
+                        <h5><a href="#">@article.Title</a></h5>
+                        <a href="#" class="read_more">Read More</a>
+                        <div class="fn__hidden">
+                            <p class="fn__cat">@article.CreationDate</p>
+                            <h3 class="fn__title">@article.Title</h3>
+                            <p class="fn__cat">@article.Category</p>
+                            <div class="img_holder">
+                                <img src="~/img/thumb/square.jpg" alt="@article.PictureAlt" title="@article.Title">
+                                    <div class="abs_img" style="background-image: url('/Images/@article.Picture');"></div>
+                            </div>
+                                <p class="fn__desc">@Html.Raw(article.Description)</p>
+                        </div>
+                    </div>
+                    <div class="item_right">
+                            <div class="abs_img" style="background-image: url('/Images/@article.Picture');"></div>
+                    </div>
+                </div>
+            </li>
+            }
+
+        </ul>
+    </div>
+    <div class="load_more">
+        <a href="#" data-done="Done" data-no="No more articles found">
+            <span class="text">Load More Articles</span>
+            <span class="fn__pulse">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </a>
+    </div>
+</section>
