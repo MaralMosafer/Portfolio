@@ -1,4 +1,5 @@
 ﻿@page
+@using ContactManagement.Application.Contracts.Contact;
 @model IndexModel
 @{
     ViewData["Title"] = "Home";
@@ -59,51 +60,7 @@
 
     @await Component.InvokeAsync("Article")
 
-
-
-    <section id="contact" class="section_contact">
-        <div class="section_title">
-            <h3>Contact Me</h3>
-        </div>
-        <form class="contact_form" action="/" method="post" autocomplete="off" data-email="frenifyteam@gmail.com">
-
-            <!--
-                Don't remove below code in avoid to work contact form properly.
-                You can chance dat-success value with your one. It will be used when user will try to contact via contact form and will get success message.
-            -->
-            <div class="success" data-success="Your message has been received, we will contact you soon."></div>
-            <div class="empty_notice"><span>Please Fill Required Fields!</span></div>
-            <!-- -->
-
-            <div class="items_wrap">
-                <div class="items">
-                    <div class="item half">
-                        <div class="input_wrapper">
-                            <input id="name" type="text" placeholder="Name *" />
-                        </div>
-                    </div>
-                    <div class="item half">
-                        <div class="input_wrapper">
-                            <input id="email" type="email" placeholder="Email *" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="input_wrapper">
-                            <input id="phone" type="text" placeholder="Phone" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="input_wrapper">
-                            <textarea id="message" placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a id="send_message" href="#">Send Message</a>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </section>
+    @await Html.PartialAsync("_Contact",new AddContact())
 
 
 </div>

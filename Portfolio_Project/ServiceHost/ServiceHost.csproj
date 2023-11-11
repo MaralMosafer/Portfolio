@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="Areas\Administration\Pages\Portfolio\WorkSample\Edit.cshtml~RF1d41364.TMP" />
+    <None Remove="Pages\Shared\_Contact.cshtml~RF2fdd875.TMP" />
   </ItemGroup>
 
   <ItemGroup>

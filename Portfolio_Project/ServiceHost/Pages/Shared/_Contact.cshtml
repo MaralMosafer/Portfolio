@@ -1,0 +1,37 @@
+﻿@model ContactManagement.Application.Contracts.Contact.AddContact
+
+<section id="contact" class="section_contact">
+    <div class="section_title">
+        <h3>Contact Me</h3>
+    </div>
+    <form class="contact_form" asp-page="./Index" method="post">
+
+        <div class="items_wrap">
+            <div class="items">
+                <div class="item half">
+                    <div class="input_wrapper">
+                        <input required type="text" placeholder="Name *" name="Name" asp-for="Name"/>
+                    </div>
+                </div>
+                <div class="item half">
+                    <div class="input_wrapper">
+                        <input required type="email" placeholder="Email *" name="Email" asp-for="Email"/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="input_wrapper">
+                        <input required type="text" placeholder="Subject" name="Subject" asp-for="Subject"/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="input_wrapper">
+                        <textarea required placeholder="Message" name="Message" asp-for="Message"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <input type="submit">Send Message</input>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

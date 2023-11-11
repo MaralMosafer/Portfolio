@@ -1419,7 +1419,7 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
 	padding-left: 50px;
 	margin-bottom: 20px;
 }
-.tips_content .item{
+.tips_content .item button{
 	width: 100%;
 	display: -webkit-flex;
 	display: -moz-flex;
