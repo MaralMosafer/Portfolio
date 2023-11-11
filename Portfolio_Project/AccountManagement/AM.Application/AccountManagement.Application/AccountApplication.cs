@@ -90,7 +90,7 @@ namespace AccountManagement.Application
                 return operationResult.Failed(ApplicationMessages.WrongPassword);
 
             //Login
-            var accountViewModel = new AuthViewModel(account.Id, account.Fullname, account.Email);
+            var accountViewModel = new AuthViewModel(account.Id, account.Fullname, account.Email,account.ProfilePicture);
             _authHelper.Signin(accountViewModel);
             return operationResult.Successful();
         }

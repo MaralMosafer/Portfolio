@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using System.Data;
 using System.Security.Claims;
 using System.Security.Principal;
 
@@ -13,6 +14,20 @@ namespace _0_Framework.Application
         public AuthHelper(IHttpContextAccessor contextAccessor)
         {
             _contextAccessor = contextAccessor;
+        }
+
+        public AuthViewModel CurrentAccountInfo()
+        {
+            var result = new AuthViewModel();
+            if (!IsAuthenticated())
+                return result;
+
+            var claims = _contextAccessor.HttpContext.User.Claims.ToList();
+            result.Id = long.Parse(claims.FirstOrDefault(x => x.Type == "AccountId").Value);
+            result.Email = claims.FirstOrDefault(x => x.Type == "Email").Value;
+            result.Fullname = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value;
+            result.Profile = claims.FirstOrDefault(x => x.Type == "Profile").Value;
+            return result;
         }
 
         public string CurrentUserRole()
@@ -35,6 +50,7 @@ namespace _0_Framework.Application
                  new Claim(ClaimTypes.Name, account.Fullname),
                  new Claim(ClaimTypes.Role, account.RoleId.ToString()),
                  new Claim("Email", account.Email),
+                 new Claim("Profile",account.Profile)
             };
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 

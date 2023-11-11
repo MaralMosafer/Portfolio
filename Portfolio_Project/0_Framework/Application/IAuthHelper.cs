@@ -6,5 +6,6 @@
         void Signout();
         bool IsAuthenticated();
         string CurrentUserRole();
+        AuthViewModel CurrentAccountInfo();
     }
 }
