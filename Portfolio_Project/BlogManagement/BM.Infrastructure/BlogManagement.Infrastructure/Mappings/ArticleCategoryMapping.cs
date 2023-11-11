@@ -12,6 +12,10 @@ namespace BlogManagement.Infrastructure.Mappings
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Name).HasMaxLength(150).IsRequired();
+
+            builder.HasMany(x => x.Articles)
+                .WithOne(x => x.Category)
+                .HasForeignKey(x => x.CategoryId);
         }
     }
 }
