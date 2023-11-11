@@ -1,5 +1,6 @@
 using _0_Framework.Application;
 using AccountManagement.Configuration;
+using BlogManagement.Configuration;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using ProjectManagement.Configuration;
 using ServiceHost;
@@ -15,6 +16,7 @@ builder.Services.AddRazorPages()
 {
     PortfolioManagementBootstrapper.Configure(builder.Services, builder.Configuration.GetConnectionString("PortfolioDB"));
     AccountManagementBootstrapper.Configure(builder.Services, builder.Configuration.GetConnectionString("PortfolioDB"));
+    BlogManagementBootstrapper.Configure(builder.Services, builder.Configuration.GetConnectionString("PortfolioDB"));
     builder.Services.AddTransient<IFileUploader, FileUploader>();
     builder.Services.AddHttpContextAccessor();
 
