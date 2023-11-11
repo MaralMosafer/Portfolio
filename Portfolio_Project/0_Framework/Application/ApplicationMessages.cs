@@ -7,5 +7,6 @@
         public const string PasswordNotMatch = "Password Not Match,Try Again.";
         public const string WrongUsername = "Username Not Exists,Try Again.";
         public const string WrongPassword = "Password is Wrong,Try Again.";
+        public const string ContactUs = "Your Message has been Sent Successfully.";
     }
 }
