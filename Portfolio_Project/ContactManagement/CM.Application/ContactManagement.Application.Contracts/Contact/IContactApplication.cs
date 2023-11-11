@@ -1,6 +1,6 @@
 ﻿using _0_Framework.Application;
 
-namespace ContactManagement.Application.Contracts
+namespace ContactManagement.Application.Contracts.Contact
 {
     public interface IContactApplication
     {

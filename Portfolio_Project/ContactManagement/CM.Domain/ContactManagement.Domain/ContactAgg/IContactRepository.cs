@@ -1,5 +1,5 @@
 ﻿using _0_Framework.Domain;
-using ContactManagement.Application.Contracts;
+using ContactManagement.Application.Contracts.Contact;
 
 namespace ContactManagement.Domain.ContactAgg
 {

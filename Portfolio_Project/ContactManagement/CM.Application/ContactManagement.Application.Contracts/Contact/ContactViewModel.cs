@@ -1,4 +1,4 @@
-﻿namespace ContactManagement.Application.Contracts
+﻿namespace ContactManagement.Application.Contracts.Contact
 {
     public class ContactViewModel
     {
