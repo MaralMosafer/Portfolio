@@ -9,7 +9,7 @@ namespace BlogManagement.Infrastructure
     {
         public DbSet<ArticleCategory> ArticleCategories { get; set; }
         public DbSet<Article> Articles { get; set; }
-        public BlogContext(DbContextOptions options) : base(options)
+        public BlogContext(DbContextOptions<BlogContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

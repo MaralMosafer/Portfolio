@@ -1,0 +1,81 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Contact.IndexModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row bg-secondary rounded align-items-center justify-content-center mx-0">
+        <div class="col-sm-12 ">
+
+            <form class="form-inline float-right mt-4" role="form" method="get">
+                <button type="submit" class="btn btn-dark waves-effect waves-light m-l-10">Search</button>
+                <div class="form-group m-2">
+                    <div class="form-check">
+                        <input class="form-check-input ml-1" type="checkbox" id="gridCheck1" asp-for="SearchModel.IsRecived">
+                        <label class="form-check-label" for="gridCheck1">
+                            Unread Messages
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <form class="form-inline float-right mt-3" role="form" method="get" novalidate="novalidate">
+                <button type="submit" class="btn btn-dark waves-effect waves-light m-l-10">Search</button>
+                <div class="form-group m-2">
+                    <label class="sr-only" for="SearchModel_Name">Name</label>
+                    <input class="form-control" placeholder="Name" type="text" asp-for="SearchModel.Name">
+                </div>
+            </form>
+            <a class="btn btn-primary waves-effect waves-light float-right m-4" asp-page="./Index">Show All</a>
+            <h6 class="mb-5 mt-5">Contact</h6>
+
+        </div>
+
+        <table class="able table-hover m-5">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col" class="text-center">Name</th>
+                    <th scope="col" class="text-center">Subject</th>
+                    <th scope="col" class="text-center">CreationDate</th>
+                    <th scope="col" class="text-center">Status</th>
+                    <th scope="col" class="text-center">Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var contact in Model.Contacts)
+                {
+                    <tr>
+                        <th scope="row" class="text-center">@contact.Id</th>
+                        <td class="text-center">@contact.Name</td>
+                        <td class="text-center">@contact.Subject</td>
+                        <td class="text-center">@contact.CreationDate</td>
+                        <td class="text-center">
+                            @if (contact.IsRecived)
+                            {
+                                <i class="fa fa-check fa-2x text-success"></i>
+                            }
+                            else
+                            {
+                                <i class="fa fa-times fa-2x text-danger"></i>
+                            }
+                        </td>
+                        <td class="text-center">
+                            <a class="btn btn-light m-2" href="#showmodal=@Url.Page("./Index", "Detail", new { id = contact.Id})">
+                                Details...
+                            </a>
+                            @if (!contact.IsRecived)
+                            {
+                                <a asp-page="./Index" asp-page-handler="Recive" asp-route-id="@contact.Id"
+                                   class="btn btn-warning waves-effect m-b-5">Recived</a>
+                            }
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -18,7 +18,8 @@ namespace ContactManagement.Infrastructure.Repositories
             {
                 Id = x.Id,
                 Email = x.Email,
-                Message = x.Message
+                Message = x.Message,
+                Name = x.Name
             }).FirstOrDefault(c => c.Id == id);
         }
 
@@ -27,7 +28,7 @@ namespace ContactManagement.Infrastructure.Repositories
             var query = _context.Contacts.Select(c => new ContactViewModel
             {
                 Id = c.Id,
-                CreationDate = c.CreationDate.ToString(),
+                CreationDate = c.CreationDate.ToString("MMMM d, yyyy"),
                 IsRecived = c.IsRecived,
                 Name = c.Name,
                 Subject = c.Subject
