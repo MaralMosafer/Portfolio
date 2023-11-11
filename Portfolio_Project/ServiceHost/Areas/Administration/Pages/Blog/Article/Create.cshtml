@@ -1,0 +1,54 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Blog.Article.CreateModel
+@{
+    ViewData["Title"] = "Create Article";
+}
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row bg-secondary rounded align-items-center justify-content-center mx-0">
+        <h6 class="mb-5 mt-5">Create Article</h6>
+
+        @if (Model.Message != null)
+        {
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <i class="fa fa-close me-2"></i>@Model.Message
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <form role="form" method="post" enctype="multipart/form-data" class="m-5">
+
+            <div class="form-floating mb-3">
+                <input type="text" name="Title" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">Title</label>
+            </div>
+
+            <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example" asp-items="Model.Categories" name="CategoryId">
+                <option value="0" selected="">Select Category...</option>
+            </select>
+
+            <div class="mb-3">
+                <label for="formFile" name="Picture" class="form-label">Picture</label>
+                <input type="file" name="Picture" class="form-control form-control-sm bg-dark" id="formFileSm" accept="image/*" required>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" name="PictureAlt" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">PictureAlt</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" name="PictureTitle" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">PictureTitle</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <textarea class="form-control" id="BodyContent" asp-for="Command.Description" name="Description" style="height:250px;"></textarea>
+                <label for="floatingInput">Description</label>
+            </div>
+
+            <button type="submit" class="btn btn-success m-2">Save</button>
+        </form>
+    </div>
+</div>

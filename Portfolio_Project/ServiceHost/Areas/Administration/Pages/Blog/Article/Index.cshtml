@@ -1,0 +1,71 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Blog.Article.IndexModel
+@{
+    ViewData["Title"] = "Article";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row bg-secondary rounded align-items-center justify-content-center mx-0">
+        <div class="col-sm-12 ">
+            <p class="float-right mt-4">
+                <a class="btn btn-success btn-lg" asp-page="./Create">Create Article</a>
+            </p>
+            <h6 class="mb-5 mt-5">Articles</h6>
+
+        </div>
+        <table class="able table-hover m-5">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col" class="text-center">Title</th>
+                    <th scope="col" class="text-center">Picture</th>
+                    <th scope="col" class="text-center">Category</th>
+                    <th scope="col" class="text-center">CreationDate</th>
+                    <th scope="col" class="text-center">Status</th>
+                    <th scope="col" class="text-center">Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var article in Model.Articles)
+                {
+                    <tr>
+                        <th scope="row" class="text-center">@article.Id</th>
+                        <td class="text-center">@article.Title</td>
+                        <td class="text-center">
+                            <div class="d-flex justify-content-center">
+                                <img src="~/Images/@article.Picture" width="70" height="70" />
+                            </div>
+                        </td>
+                        <td class="text-center">@article.Category</td>
+                        <td class="text-center">@article.CreationDate</td>
+                        <td class="text-center">
+                            @if (article.IsActive)
+                            {
+                                <i class="fa fa-check fa-2x text-success"></i>
+                            }
+                            else
+                            {
+                                <i class="fa fa-times fa-2x text-danger"></i>
+                            }
+                        </td>
+                        <td class="text-center">
+                            <a class="btn btn-warning m-2" asp-page="./Edit" asp-route-id="@article.Id">
+                                Edit
+                            </a>
+                            @if (article.IsActive)
+                            {
+                                <a asp-page="./Index" asp-page-handler="Remove" asp-route-id="@article.Id"
+                                   class="btn btn-danger waves-effect m-b-5">Remove</a>
+                            }
+                            else
+                            {
+                                <a asp-page="./Index" asp-page-handler="Active" asp-route-id="@article.Id"
+                                   class="btn btn-success waves-effect m-b-5">Active</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

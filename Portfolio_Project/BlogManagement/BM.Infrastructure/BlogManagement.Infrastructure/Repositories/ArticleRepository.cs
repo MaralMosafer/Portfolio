@@ -20,7 +20,6 @@ namespace BlogManagement.Infrastructure.Repositories
                 Id = a.Id,
                 Category = a.Category.Name,
                 CreationDate = a.CreationDate.ToString("MMMM d, yyyy"),
-                Description = a.Description,
                 IsActive = a.IsActive,
                 Picture = a.Picture,
                 Title = a.Title
