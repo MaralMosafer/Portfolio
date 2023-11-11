@@ -1,0 +1,59 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Blog.Category.IndexModel
+@{
+    ViewData["Title"] = "Article Category";
+}
+
+<div id="MainModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-secondary" id="ModalContent">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row bg-secondary rounded align-items-center justify-content-center mx-0">
+        <h6 class="mb-5 mt-5">Article Category</h6>
+
+        @if (Model.Message != null)
+        {
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <i class="fa fa-close me-2"></i>@Model.Message
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <form role="form" method="post" asp-page-handler="Create" enctype="multipart/form-data" class="m-5">
+
+            <div class="form-floating mb-3">
+                <input type="text" name="Name" class="form-control" id="floatingInput" required>
+                <label for="floatingInput">Name</label>
+            </div>
+
+            <button type="submit" class="btn btn-success m-2">Save</button>
+        </form>
+
+        <table class="able table-hover m-5">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col" class="text-center">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var category in Model.articleCategories)
+                {
+                    <tr>
+                        <th scope="row" class="text-center">@category.Id</th>
+                        <td class="text-center">@category.Name</td>
+                        <td>
+                            <a class="btn btn-warning m-2" href="#showmodal=@Url.Page("./Index", "Edit", new { id = category.Id})">
+                                Edit
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
