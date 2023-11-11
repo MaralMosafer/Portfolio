@@ -21,6 +21,7 @@
     <ProjectReference Include="..\1_PortfolioQuery\1_PortfolioQuery.csproj" />
     <ProjectReference Include="..\AccountManagement\AM.Infrastructure\AccountManagement.Configuration\AccountManagement.Configuration.csproj" />
     <ProjectReference Include="..\BlogManagement\BM.Infrastructure\BlogManagement.Configuration\BlogManagement.Configuration.csproj" />
+    <ProjectReference Include="..\ContactManagement\CM.Infrastructure\ContactManagement.Configuration\ContactManagement.Configuration.csproj" />
     <ProjectReference Include="..\ProjectManagement.Configuration\PortfolioManagement.Configuration.csproj" />
   </ItemGroup>
 
