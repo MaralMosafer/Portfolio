@@ -30,7 +30,6 @@ namespace AccountManagement.Infrastructure.Repositories
                 Id = a.Id,
                 Email = a.Email,
                 Fullname = a.Fullname,
-                Password = a.Password,
             }).FirstOrDefault(a => a.Id == id);
         }
     }

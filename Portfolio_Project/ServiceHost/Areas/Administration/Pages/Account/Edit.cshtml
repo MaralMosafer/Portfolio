@@ -1,0 +1,47 @@
+﻿@model AccountManagement.Application.Contracts.Account.EditAccount
+
+
+<div class="modal-header">
+    <h5 class="modal-title" id="EditModalLabel">Edit @Model.Fullname</h5>
+    <button type="button" class="close ml-1" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+</div>
+<form asp-page="./Index" asp-page-handler="Edit"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+
+
+    <div class="modal-body">
+
+        <div class="form-floating mb-3">
+            <input type="text" name="Fullname" class="form-control" id="floatingInput" required asp-for="Fullname">
+            <label for="floatingInput">Fullname</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" name="Email" class="form-control" id="floatingInput" required asp-for="Email">
+            <label for="floatingInput">Email</label>
+        </div>
+
+        <div class="mb-3">
+            <label for="formFile" name="ProfilePicture" class="form-label">Picture</label>
+            <input type="file" name="ProfilePicture" class="form-control form-control-sm bg-dark" id="formFileSm" accept="image/*" asp-for="ProfilePicture">
+        </div>
+
+    </div>
+
+    <input type="hidden" value="@Model.Id" name="Id" />
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger ml-2" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Save Changes</button>
+    </div>
+</form>
+
+
+
+
+

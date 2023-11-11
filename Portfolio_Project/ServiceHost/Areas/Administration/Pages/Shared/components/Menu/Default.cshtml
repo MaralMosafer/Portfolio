@@ -4,6 +4,7 @@
 
 <div class="navbar-nav w-100">
     <a asp-page="/Index" class="nav-item nav-link @(currentPage == "/Administration" ? "active" : "")"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+    <a asp-page="/Account/Index" class="nav-item nav-link @(currentPage == "/Administration/Account" ? "active" : "")"><i class="fa fa-exclamation-circle me-2"></i>Account</a>
     <a asp-page="/Information" class="nav-item nav-link @(currentPage == "/Administration/Information" ? "active" : "")"><i class="fa fa-exclamation-circle me-2"></i>Information</a>
     <a asp-page="/Biography" class="nav-item nav-link @(currentPage == "/Administration/Biography" ? "active" : "")"><i class="fa fa-exclamation-circle me-2"></i>Biography</a>
     <a asp-page="/Education/Index" class="nav-item nav-link @(currentPage == "/Administration/Education" ? "active" : "")"><i class="fa fa-exclamation-circle me-2"></i>Education</a>
@@ -11,7 +12,7 @@
     <a asp-page="/Skill/Index" class="nav-item nav-link @(currentPage == "/Administration/Skill" ? "active" : "")"><i class="fa fa-exclamation-circle me-2"></i>Skill</a>
     <a asp-page="/Service/Index" class="nav-item nav-link @(currentPage == "/Administration/Service" ? "active" : "")"><i class="fa fa-exclamation-circle me-2"></i>Service</a>
     <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle @(currentPage.StartsWith("/Administration/Portfolio") ? "active" : "")" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Portfolio</a>
+        <a href="#" class="nav-link dropdown-toggle @(currentPage.StartsWith("/Administration/Portfolio") ? "active" : "")" data-bs-toggle="dropdown"><i class="fa fa-exclamation-circle me-2"></i>Portfolio</a>
         <div class="dropdown-menu bg-transparent border-0">
             <a asp-page="/Portfolio/Category/Index" class="dropdown-item @(currentPage == "/Administration/Portfolio/Category" ? "active" : "")">Category</a>
             <a asp-page="/Portfolio/WorkSample/Index" class="dropdown-item @(currentPage == "/Administration/Portfolio/WorkSample" ? "active" : "")">Portfolio</a>
