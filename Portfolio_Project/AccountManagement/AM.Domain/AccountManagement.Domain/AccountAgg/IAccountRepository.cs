@@ -7,5 +7,6 @@ namespace AccountManagement.Domain.AccountAgg
     {
         EditAccount GetDetailsBy(long id);
         List<AccountViewModel> GetAll();
+        Account GetBy(string email);
     }
 }

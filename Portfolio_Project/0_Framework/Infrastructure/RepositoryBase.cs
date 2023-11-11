@@ -21,6 +21,7 @@ namespace _0_Framework.Infrastructure
 
         public Model GetBy(long id) => _context.Find<Model>(id);
 
+
         public List<Model> GetList() => _context.Set<Model>().ToList();
 
         public void SaveChanges() => _context.SaveChanges();

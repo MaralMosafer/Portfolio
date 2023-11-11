@@ -23,6 +23,11 @@ namespace AccountManagement.Infrastructure.Repositories
             }).ToList();
         }
 
+        public Account GetBy(string email)
+        {
+            return _context.Accounts.FirstOrDefault(a=>a.Email==email);
+        }
+
         public EditAccount GetDetailsBy(long id)
         {
             return _context.Accounts.Select(a => new EditAccount

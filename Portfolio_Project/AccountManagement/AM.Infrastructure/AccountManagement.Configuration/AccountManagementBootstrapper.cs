@@ -1,4 +1,5 @@
-﻿using AccountManagement.Application;
+﻿using _0_Framework.Application;
+using AccountManagement.Application;
 using AccountManagement.Application.Contracts.Account;
 using AccountManagement.Domain.AccountAgg;
 using AccountManagement.Infrastructure;
@@ -19,6 +20,9 @@ namespace AccountManagement.Configuration
 
             services.AddTransient<IAccountApplication,AccountApplication>();
             services.AddTransient<IAccountRepository, AccountRepository>();
+
+            services.AddSingleton<IPasswordHasher, PasswordHasher>();
+            services.AddTransient<IAuthHelper, AuthHelper>();
         }
     }
 }
